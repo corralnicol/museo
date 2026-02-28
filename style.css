@@ -1,65 +1,32 @@
-/* Convierte el contenedor de la galería en un Flexbox. */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    font-size: 1rem;
+    background-color: #eee;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 #galeria {
     display: flex;
-    justify-content: space-around; /* Distribuye el espacio entre los elementos hijos. */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva línea. */
-    gap: 20px; /* Crea un espacio uniforme entre los elementos. */
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
 }
 
-/* Pseudoelemento '::before' para insertar contenido antes del elemento h2. */
-.exhibicion h2::before {
-    content: "🖼️ "; /* El contenido a insertar (emoji). */
-    margin-right: 5px; /* Espacio entre el icono y el texto. */
-}
-
-.exhibicion img {
-    max-width: 200px;
-    max-height: 200px; 
-    min-height:  200px; 
-}
-
-/* Estilos básicos para el botón de información. */
-.boton-info {
-    display: inline-block; /* Permite aplicar padding y margin. */
-    background-color: #337ab7;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.2s; /* Transición suave para el cambio de color. */
-}
-
-/* Pseudoclase ':active' para cambiar el color del botón cuando se presiona. */
-.boton-info:active {
-    background-color: #286090;
-}
-
-
-/* Estilos para los elementos hijos (las exhibiciones). */
 .exhibicion {
-    flex: 1 1 calc(33% - 20px); /* flex-grow, flex-shrink y flex-basis. */
-    /* flex-grow: 1 -> Ocupa el espacio extra. */
-    /* flex-shrink: 1 -> Se encoge si el espacio es limitado. */
-    /* flex-basis: calc(33% - 20px) -> Ancho inicial. */
-    box-sizing: border-box; /* Incluye el padding y border en el ancho total. */
-}
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 100%;
 
-/* Media Query que aplica estilos solo en pantallas con un ancho máximo de 768px. */
-@media (max-width: 768px) {
-    /* El contenedor Flexbox cambia la dirección de sus hijos. */
-    #galeria {
-        flex-direction: column; /* Apila las exhibiciones verticalmente. */
-        align-items: center; /* Centra los elementos hijos en el eje transversal. */
+    img {
+        width: 100%;
+        height: 40%;
+        object-fit: scale-down;
     }
-
-    /* Estilos específicos para el encabezado en pantallas pequeñas. */
-    header h1 {
-        text-align: center;
-    }
-
-    /* Las exhibiciones ocuparán el 90% del ancho del contenedor padre. */
-    .exhibicion {
-        width: 90%;
-    }
-}
-
+} 
