@@ -55,19 +55,19 @@ body {
 }
 
 #arte-antiguo {
-    background-color: rgba(163, 169, 99, 0.263);    
+    background-color: rgba(163, 169, 99, 0.263);
 }
 
 #arte-antiguo:hover {
-    background-color: rgba(163, 169, 99, 0.614);    
+    background-color: rgba(163, 169, 99, 0.614);
 }
 
 #arte-moderno {
-    background-color: rgba(112, 157, 164, 0.447);    
+    background-color: rgba(112, 157, 164, 0.447);
 }
 
 #arte-moderno:hover {
-    background-color: rgba(99, 160, 169, 0.614);    
+    background-color: rgba(99, 160, 169, 0.614);
 }
 
 .boton-info {
