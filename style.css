@@ -13,7 +13,7 @@ body {
 
 #galeria {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;    
     padding: 20px;
     gap: 20px;
 }
@@ -24,6 +24,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 1.5rem;
     width: 100%;
+    max-height: 380px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 
@@ -38,9 +39,28 @@ body {
     }
 }
 
-.exhibicion:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
+#arte-contemporaneo {
+    background-color: rgba(169, 99, 99, 0.459);
+}
+
+#arte-contemporaneo:hover {
+    background-color: rgba(169, 99, 99, 0.744);
+}
+
+#arte-antiguo {
+    background-color: rgba(163, 169, 99, 0.263);    
+}
+
+#arte-antiguo:hover {
+    background-color: rgba(163, 169, 99, 0.614);    
+}
+
+#arte-moderno {
+    background-color: rgba(112, 157, 164, 0.447);    
+}
+
+#arte-moderno:hover {
+    background-color: rgba(99, 160, 169, 0.614);    
 }
 
 .boton-info {
